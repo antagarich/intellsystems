@@ -1,0 +1,36 @@
+{% extends "main.html" %}
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+{% block content %}
+    <div class="container-fluid">
+    <div class="page-header">
+  <h3> Генетические алгоритмы </h3>
+    </div>
+    </div>
+    <p><form action ="/ga/config"
+          method ="POST">{% csrf_token %}
+          <h3>Граф расстояний:    <input type = "text"
+                 name = "graph"></h3>
+          <h3>Размер популяции:    <input type = "text"
+                 name = "population_size"></h3>
+          <h3>Вероятность мутации: <input type = "text"
+                 name = "mutation_prob"></h3>
+          <h3>Размер выборки:    <input type = "text"
+                 name = "selection_count"></h3>
+          <h3>Размер генома:     <input type = "text"
+                 name = "genome_size"></h3>
+          <h3>Стартовая точка:     <input type = "text"
+                 name = "start_node"></h3>
+          <h3>Конечная точка:      <input type = "text"
+                 name = "finish_node"></h3>
+    <h1><button type = "submit"> Сформировать</button></h1>
+
+    </form></p>
+{% endblock %}
+</body>
+</html>

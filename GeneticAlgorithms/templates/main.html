@@ -1,0 +1,31 @@
+{% load staticfiles %}
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Интеллектуальные системы</title>
+     <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+
+</head>
+<body>
+    <div class=" navbar-default" role = navigation>
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class = "sr-only"> Toggle navigation</span>
+                <span class = "icon-bar"></span>
+                <span class = "icon-bar"></span>
+                <span class = "icon-bar"></span>
+            </button>
+                <a class = "navbar-brand" href = "/">Kornukov IU5-17</a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="navbar-nav nav">
+                    <li><a href="/ga/">Генетические алгоритмы </a></li>
+                    <li><a href="/">padre</a></li>
+                    <li><a href="/">hijo</a></li>
+                </ul>
+        </div>
+    </div>
+{% block content %} {% endblock %}
+</body>
+</html>
